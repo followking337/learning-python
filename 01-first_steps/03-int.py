@@ -1,0 +1,40 @@
+print('\nОперации над числами:')
+print(8 / 4)
+print(1 / 3)
+print(2 ** 3)
+print(11 // 5)
+print(37 // 11)
+print(27 % 5)
+print(15 % 3)
+print(2 % 7)
+
+print('\nВстроеные математические функции:')
+print('\nabs():')
+print(abs(-7))
+print(abs(7))
+print(abs(-5 * 4))
+
+print('\nmax(), min():')
+print(min(3, 4, 6, 73))
+print(max(3, 4, 6, 73))
+
+print('\npow():')
+print(pow(2, 3))
+print(2 ** 3)
+
+print('\nround():')
+# по умолчанию стоит 0
+print(round(3.5456))
+print(round(3.4498754))
+print(round(3.456, 2))
+print(round(456, -1))
+print(round(456, -2))
+
+print('\ntype():')
+print(type(4))
+print(type(46 / 2))
+
+print('\nEgoroff HomeWork:')
+print('\nЗадача №3443. Степень двойки.')
+print(pow(2, 179))
+print(2 ** 179)

@@ -1,0 +1,5 @@
+hello from mode "w" 1
+hello from mode "w" 2
+hello from mode "w" 3
+goodbye from mode "a"
+goodbye from mode "a+"
