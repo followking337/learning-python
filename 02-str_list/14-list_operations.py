@@ -1,6 +1,4 @@
-print('\nlist:')
-
-print('\nОперации:')
+print('\nOperations:')
 marks = [4, 5, 3, 4, 5]
 june_temper = [20, 24, 30, 43, 12, 23]
 a = [True, 43, 'hello', 5.4, [4, 5, 6]]
@@ -12,14 +10,14 @@ print(len([1, 2, 3]))
 print(len(a))
 print(len(b))
 
-print('\nСложение:')
+print('\nSum:')
 print([12, 23] + [1, 2, 3])
 print(a + [4])  # a = a + 4 TypeError: can only concatenate list (not "int") to list
 print(['hi'] + a)
 print([0] * 5)
 print([1, 2, 3] * 5)  # print([1, 2, 3] * 5.4) TypeError: can't multiply sequence by non-int of type 'float'
 
-print('\nKeyword: in')
+print('\nin:')
 print(5.4 in a)
 print(False in a)
 print([4, 5, 6] in a)
@@ -38,7 +36,7 @@ print('\nsorted():')
 print(sorted(w))
 print(sorted(w, reverse=True))
 
-print('\nСравнение:')
+print('\nComparison:')
 print([100, 54] > [34, 543, 654, 43])  # Сравнивает по первому элементу.
 print([1, 2, 3] == [1, 2, 3])
 print([1, 2, 3] == [1, 2, 'wegm'])

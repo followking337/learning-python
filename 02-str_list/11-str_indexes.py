@@ -1,6 +1,4 @@
-print('\nstr:')
-
-print('\nИндексы:')
+print('\nIndexes:')
 s = 'hello world'
 print(s)
 for i in range(len(s)):

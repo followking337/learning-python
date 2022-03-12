@@ -1,4 +1,9 @@
-print('\n// and %:')
+"""
+// and %
+    a = b * r + q  --> 41 = 12 * 3 + 5
+    r = a // b     --> 3 = 41 // 12
+    q = a % b      --> 5 = 41 % 12
+"""
 
 print('\nTenemos 41 huevos y cestas de 12 huevos:')
 print('Cuantas cestas necesitamos?')
@@ -7,14 +12,7 @@ print(41 // 12)
 print('\nCuantos huevos quedan sin cesta?')
 print(41 % 12)
 
-print('\n3 = 41 // 12')
-print('5 = 41 % 12')
-print('41 = 12 * 3 + 5')
-
-print('\nОстаток по числам:')
-print('8, 15, 22, 29,...')
 print(8 % 7)
-print('\n10, 17, 24, 31,...')
 print(10 % 7)
 
 print('\nОстаток по числам на 1, 10, 100, 1000 (оставляем справа):')

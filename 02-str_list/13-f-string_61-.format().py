@@ -30,10 +30,10 @@ d = {
     'balance': 32.56
     }
 
-text = f"""Дорогой {d['name']} {d['surname']}, баланс вашего счета составляет {d.get('balance')} руб."""
+text = f"Дорогой {d['name']} {d['surname']}, баланс вашего счета составляет {d.get('balance')} руб."
 print(text)
 
-print('\nРаспокование переменных:')
+print('\nРаспакованние переменных:')
 i = [1, 2, 3]
 a, b, c = i
 print(a, b, c)
@@ -45,15 +45,15 @@ a = [
     ['Михаил', 'Анатольевич', 238.12, 'm'],
 ]
 
-for name, surname, balance, g in a:
-    print(name, surname, balance)
+for name, surname, balance, gender in a:
+    print(name, surname, balance, gender)
 
-print('\nText:')
 d = {
     'm': 'Дорогой',
     'f': 'Дорогая'
 }
 
+print('\nText:')
 for name, surname, balance, gender in a:
     text = f'{d[gender]} {name} {surname}, баланс вашего счета составляет {balance} руб.'
     print(text)

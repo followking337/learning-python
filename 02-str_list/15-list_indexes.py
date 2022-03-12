@@ -1,9 +1,7 @@
-print('\nlist:')
-
 a = [43, 54, 2, 54, 32]
 b = [3, 4, 5, 6, 7, 8, 9, 10, 11]
 
-print('\nИндексы:')
+print('\nIndexes:')
 print(a[0])
 print(a[4])
 # print(a[7])  IndexError: list index out of range
@@ -20,7 +18,7 @@ print(b[2:])
 print(b[:2])
 print(b[:])
 
-print('\nСрезы с третим параметром:')
+print('\nСрезы с третьим параметром:')
 print(b[::2])
 print(b[1::2])
 print(b[3:7:3])

@@ -1,6 +1,4 @@
-print('\nstr:')
-
-print('\nОперации:')
+print('\nOperations:')
 print('''hello
 world
 456''')

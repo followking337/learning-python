@@ -45,7 +45,7 @@ print([i for i in s if i.isdigit()])
 print([int(i) for i in s if i.isdigit()])
 print([i for i in s if i.isalpha()])
 
-print('\nnested list coprehension for nested array:')
+print('\nnested list comprehension for nested array:')
 n, m = 5, 5
 a = [[random.randint(1, 6) for j in range(m)] for i in range(n)]
 # для каждого значения i формируется внутренний генератор повторяющийся m раз где формируются random числа от 1 до 6.
