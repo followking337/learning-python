@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>Гороскоп для {{ sign }}</title>-->
+<!--    <title>Гороскоп для {{ sign|capfirst }}</title>-->
+    <title>Гороскоп для {{ sign|upper }}</title>
+</head>
+<body>
+    <h1>Приложение гороскоп</h1>
+
+    {% if description is None %}
+        <h2>Неправильный знак зодиака - {{ sign|capfirst }}</h2>
+    {% else %}
+        <h2>{{ description|title|safe }}</h2>
+    {% endif %}
+
+
+    {% if my_list|length >= 3 %}
+        <p>Список из 3х или больше элементов - {{ my_list }}</p>
+    {% elif my_list|length == 2 %}
+        <p>Список из 2х элементов - {{ my_list }}</p>
+    {% elif my_list|length == 1 %}
+        <p>Список из 1го элемента - {{ my_list }}</p>
+    {% else %}
+        <p>Пустой список - {{ my_list }}</p>
+    {% endif %}
+
+
+    <p>Integer: {{ my_int|add:100 }}</p>
+    <p>Float: {{ my_float|add:my_int }}</p>
+    <p>List: {{ my_list|first }}</p>
+    <p>List: {{ my_list|last }}</p>
+    <p>Tuple: {{ my_tuple }}</p>
+    <p>Tuple: {{ my_tuple|join:"! " }}</p>
+    <p>Dict: {{ my_dict }}, key: {{ my_dict.name }}</p>
+    <p>Class Instance: {{ my_class }} {{ my_class.age }} </p> <!-- __str__ -->
+    <p>Filter: {{ value1|default:"nothing" }}</p>
+    <p>Filter: {{ value2|default:"nothing" }}</p>
+</body>
+</html>

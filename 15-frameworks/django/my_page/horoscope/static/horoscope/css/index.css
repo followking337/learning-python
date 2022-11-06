@@ -1,0 +1,32 @@
+
+ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;  /* 2 колонки */
+    list-style-type: none;  /* убираем значки */
+    background-color: #f1f1f1;
+    width: 90%;
+    max-width: 35rem;
+    border-radius: 20px;
+    margin: 2rem auto;  /* список по центру */
+    padding: 1px;
+}
+
+ul li {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 2rem 1rem;
+}
+
+ul a:hover, ul a:active {
+  color: #eca8b5;
+}
+
+h1 {
+    color: #e8dede;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 48px;
+    text-decoration: underline;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+        | Victor Robles
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <div id="logotipo">
+            <!--Logo Django-->
+            <img src="{% static 'images/logo.png' %}">
+            <h1>Sitio WEB con Django</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href='{% url "index" %}'>Inicio</a>
+            </li>
+            <li>
+                <a href='{% url "hola_mundo" %}'>Hola Mundo</a>
+            </li>
+            <li>
+                <a href='/pagina-pruebas'>Página de pruebas</a>
+            </li>
+            <li>
+                <a href='{% url "contacto" nombre="Dani" apellidos="Folomkin" %}'>Contacto</a>
+            </li>
+            <li>
+                <a href='{% url "articulos" %}'>Articulos</a>
+            </li>
+            <li>
+                <a href='{% url "create" %}'>Crear Articulo</a>
+            </li>
+            <li>
+                <a href='{% url "create_full" %}'>Crear Articulo Full</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+                <strong>Contenido del Bloque Original</strong>
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer>
+        Master en Python &copy; Victor Robles WEB - {% now "d/m/Y h:m:s" %}
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Меню
+{% endblock %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'horoscope/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'horoscope/css/info_zodiac.css' %}">
+{% endblock %}
+
+{% block content %}
+<!--    {% include 'includes/navbar.html' only with a=100 b=200 %}-->
+
+    <h1>Приложение Гороскоп</h1>
+    <ul>
+        {% for zodiac in zodiacs %}
+            <li><a href="{% url 'horoscope-name-render-dynamic' sign=zodiac %}">{{ zodiac|title }}</a></li>
+        {% endfor %}
+    </ul>
+
+<!--    {% include 'includes/navbar.html' %}-->
+{% endblock %}

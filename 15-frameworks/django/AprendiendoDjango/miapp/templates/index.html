@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+
+{% block content %}
+
+    {% include 'fecha-actual.html' with saludo='Hola Mundo desde plantilla' %}
+    {% include 'fecha-actual.html' with saludo='Hola Mundo desde plantilla' only %}
+
+    <!-- Esto es comentario de HTML -->
+
+    {% comment "Titulo del comentario" %}
+        <h1>Hola hola hola</h1>
+        este comentario no se renderiza en la vista final
+    {% endcomment %}
+
+    <h2 class="title">{{title}}</h2>
+
+    <p>{{mi_variable}}</p>
+
+    <h3>Condicionales:</h3>
+    {% if nombre and nombre == 'Victor RObles' %}
+        <p>{{nombre}}</p>
+    {% else %}
+        <i>El nombre no existe</i>
+    {% endif %}
+
+    <h3>Ciclo For:</h3>
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li>{{lenguaje}} {{forloop.last}} {{forloop.revcounter0}}</li>
+        {% empty %}
+            <p>NO HAY LENGUAJES QUE MOSTRAR</p>
+        {% endfor %}
+    </ul>
+
+    <p>Años hasta 2050:</p>
+    <ul>
+    {{2021|divisibleby:2}}
+        {% for year in years %}
+            {% if year|divisibleby:2 == True %}
+                <li>{{year}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}

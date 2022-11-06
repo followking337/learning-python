@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+</head>
+<body>
+
+    <ul>
+        {% for zodiac in zodiacs %}
+            {% if forloop.first %}
+                <li><b>{{ forloop.counter0 }} {{ zodiac|title }}</b></li>
+            {% elif forloop.last %}
+                <li style="color:red">{{ forloop.counter0 }} {{ zodiac|title }}</li>
+            {% else %}
+                <li>{{ forloop.counter0 }} {{ zodiac|title }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <br>
+
+    {% for key, value in zodiac_dict.items reversed %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+
+    <br>
+
+    {% for x, y in my_dict.items %}
+        <p>The dict is ...</p>
+    {% empty %}
+        <p>Sorry, the dict is empty</p>
+    {% endfor %}
+
+    <br>
+
+</body>
+</html>

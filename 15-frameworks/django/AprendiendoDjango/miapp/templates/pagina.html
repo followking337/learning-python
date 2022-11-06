@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load filters %}
+
+{% block title %} Pagina de Pruebas {% endblock %}
+
+{% block content %}
+
+    <h2 class="title">Filtros</h2>
+        <p>{{"Creado por Victor Robles ñññññ"|cut:"ñ"}}</p>
+        {{texto|default:"no hay nada"}}
+    <br>
+        {{texto2|default:"no hay nada"}}
+    <br>
+        {{lista|first}}
+    <br>
+        {{lista|random}}
+    <br>
+        {{lista|last}}
+    <br>
+        {{lista|join:', '}}
+    <br>
+        {{lista|length}}
+    <br>
+        {{"texto de pruebas"|length}}
+    <br>
+        {{"texto de pruebas"|upper}}
+    <br>
+        {{"teXtO de PrueBas"|lower}}
+    <br>
+        <p>
+            {{ '<h1>TITULO</h1> <strong>Pruebas</strong>'|striptags }}
+        </p>
+    <br>
+        <p>
+            {{ '<h1>TITULO</h1> <strong>Pruebas</strong> <p>django template filter</p>'|striptags|wordcount }}
+        </p>
+    <br>    
+        {{ "Victor Robles WEB"|saludo|safe }}
+
+{% endblock %}

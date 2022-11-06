@@ -1,0 +1,15 @@
+{% load filter %}
+
+<nav>
+    <a href="{% url 'horoscope-index' %}">Главная</a>
+    <a href="https://www.homeenglish.ru/OtherGoroscop.htm">Источник</a>
+    {% for zodiac, value in zodiac_dict.items %}
+        <a href="{% url 'horoscope-name-render-dynamic' sign=zodiac %}">{{ value|split|first }}</a>
+    {% endfor %}
+</nav>
+
+<!--<p>Переменная sign: {{ sign }}</p>-->
+<!--<p>Переменная description: {{ description }}</p>-->
+<!--<p>Переменная zodiacs: {{ zodiacs }}</p>-->
+<!--<p>Переменная a: {{ a }}</p>-->
+<!--<p>Переменная b: {{ b }}</p>-->
